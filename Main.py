@@ -1,0 +1,89 @@
+from email import message
+from fileinput import filename
+from importlib.resources import contents
+from tkinter.filedialog import test
+from turtle import delay, speed
+from typing_extensions import Self
+import requests
+import ctypes
+import string
+import os
+import time
+import sys
+import random, string
+from discord import Webhook, RequestsWebhookAdapter
+from discord_webhook import DiscordEmbed, DiscordWebhook
+
+import subprocess
+if os.name == "nt":
+    ctypes.windll.kernel32.SetConsoleTitleW(f"GEN AUNGPAO BY xenoz.xyz#8590")
+print("")
+def HWID():
+    cmd = 'wmic csproduct get uuid'
+    uuid = str(subprocess.check_output(cmd))
+    pos1 = uuid.find("\\n")+2
+    uuid = uuid[pos1:-15]
+    return uuid
+print(f"Your HWID is {HWID()} ")
+mess = "CHECKING YOU HWID..."
+def typewriter(message):
+        for char in mess:
+         sys.stdout.write(char)
+         sys.stdout.flush()
+         
+         time.sleep(0.1)
+typewriter(mess)
+
+hwid_auth = requests.get("https://pastebin.com/raw/f6JGg184")
+if HWID() in hwid_auth.text:
+    time.sleep(5)
+    os.system('cls')
+    print("CORRECT")
+    time.sleep(2)
+    os.system('cls')
+    
+    print("Welcome")
+    print("""            ██╗░░██╗██████╗░███████╗
+            ╚██╗██╔╝╚════██╗██╔════╝
+            ░╚███╔╝░░░███╔═╝█████╗░░ 
+            ░██╔██╗░██╔══╝░░██╔══╝░░ 
+            ██╔╝╚██╗███████╗███████╗
+            ╚═╝░░╚═╝╚══════╝╚══════╝ """)
+    
+    
+    dis="Discord: https://discord.gg/mB4dkgGra9 \n"
+    def typewriter(message):
+        for char in dis:
+         sys.stdout.write(char)
+         sys.stdout.flush()
+         time.sleep(0.09)
+    typewriter(dis)
+  
+
+    def config_read():
+        filename = "config.config"
+        contents = open(filename).read()
+        config = eval(contents)
+        link = config['link']
+        amount = int(input("amount: "))
+        front = input("3front: ")
+        behind = input("4behind: ")
+        for i in range(amount):
+            code = front + "".join(random.choices(string.digits, k=3)) + behind
+            print("[Generated] " + code)
+            webhook = Webhook.from_url(link, adapter=RequestsWebhookAdapter())
+            webhook.send(code)
+
+
+    if __name__ == "__main__":
+        config_read()   
+
+else:
+    print("Your HWID was not found ")
+    print("Pls contact xenoz.xyz#8590 to add hwid")
+    print("or join discord and open ticket")
+    
+    
+
+
+ 
