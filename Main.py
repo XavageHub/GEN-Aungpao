@@ -68,7 +68,7 @@ if HWID() in hwid_auth.text:
         amount = int(input("amount: "))
         
         for i in range(amount):
-            code = https://gift.truemoney.com/campaign/?v= + "".join(random.choices(string.digits, k=18))
+            code = 'https://gift.truemoney.com/campaign/?v=' + "".join(random.choices(string.digits, k=18))
             print("[Generated] " + code)
             webhook = Webhook.from_url(link, adapter=RequestsWebhookAdapter())
             webhook.send(code)
