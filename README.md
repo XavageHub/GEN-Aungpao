@@ -7,8 +7,8 @@ Gen-angpao ส่งผ่านเว็บฮุกได้
 # ขออีกอย่าง อย่าลบเครดิตกูก็พอกูขอล่ะ
 โดเนท(ขายได้ก็มาแบ่งตามนี้) 
 # True wallet
-! [image](https://files.catbox.moe/0cjmqn.jpg)
+![image](https://files.catbox.moe/0cjmqn.jpg)
 # Promtpay
-! [image](https://files.catbox.moe/5qeuw4.jpg)
+![image](https://files.catbox.moe/5qeuw4.jpg)
 
 # แบ่งกูด้วยสัก1บาทก็ดี
